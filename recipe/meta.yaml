@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/copykitten-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/copykitten-{{ version }}.tar.gz
   sha256: d1ee05abecca7a41605d22e1a514c762656e8d5483a9da09e2623071fca22c0a
 
 build:
   skip: true  # [py<38 or py>312]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
