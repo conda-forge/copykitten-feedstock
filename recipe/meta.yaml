@@ -1,5 +1,5 @@
 {% set name = "copykitten" %}
-{% set version = "1.2.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/copykitten-{{ version }}.tar.gz
-  sha256: d1ee05abecca7a41605d22e1a514c762656e8d5483a9da09e2623071fca22c0a
+  sha256: bda13d614ffb38147d4fce5217d4f2397967514f5ea09fb8d5c5cf5d16028e58
 
 build:
   skip: true  # [py<38 or py>312]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
