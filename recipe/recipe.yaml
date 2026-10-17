@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: copykitten
-  version: 2.0.0
+  version: "2.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/copykitten-${{ version }}.tar.gz
-  sha256: bda13d614ffb38147d4fce5217d4f2397967514f5ea09fb8d5c5cf5d16028e58
+  sha256: 7cb4c8f86f175d8ea91cac283a4c2ca507b5631d799209e2d1ba4fa35f9e9578
 
 build:
-  number: 1
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
